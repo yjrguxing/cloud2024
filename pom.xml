@@ -13,18 +13,18 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hutool.version>5.8.22</hutool.version>
+        <hutool.version>5.8.25</hutool.version>
         <lombok.version>1.18.26</lombok.version>
         <druid.version>1.1.20</druid.version>
-        <mybatis.springboot.version>3.0.2</mybatis.springboot.version>
-        <mysql.version>8.0.11</mysql.version>
+        <mybatis.springboot.version>3.0.3</mybatis.springboot.version>
+        <mysql.version>8.0.33</mysql.version>
         <swagger3.version>2.2.0</swagger3.version>
         <!--与教程中存在差异,这里从通用Mapper替换成了mybatis-mapper-->
 <!--        <mapper.version>5.0.0</mapper.version>-->
         <mybatis-mapper.version>2.2.4</mybatis-mapper.version>
         <fastjson2.version>2.0.40</fastjson2.version>
         <persistence-api.version>1.0.2</persistence-api.version>
-        <spring.boot.test.version>3.1.5</spring.boot.test.version>
+        <spring.boot.test.version>3.3.3</spring.boot.test.version>
         <spring.boot.version>3.2.0</spring.boot.version>
         <spring.cloud.version>2023.0.0</spring.cloud.version>
         <!--与教程中存在差异,这里使用了当前可用的最新版本-->
