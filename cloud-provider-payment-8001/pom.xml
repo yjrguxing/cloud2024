@@ -49,8 +49,8 @@
         </dependency>
         <!--persistence-->
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
         <!--mybatis-mapper-->
         <!--与教程中存在差异,这里从通用Mapper替换成了mybatis-mapper-->
