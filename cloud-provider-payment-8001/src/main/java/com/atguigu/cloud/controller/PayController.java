@@ -21,7 +21,7 @@ public class PayController {
     }
 
     @PostMapping("save")
-    public String savePay(Pay pay){
+    public String savePay(@RequestBody Pay pay){
         System.out.println(pay.toString());
         Pay save = payService.save(pay);
         return "成功插入数据,返回值:" + save;
@@ -33,7 +33,7 @@ public class PayController {
     }
 
     @PutMapping
-    public String updatePay(PayDTO payDTO){
+    public String updatePay(@RequestBody PayDTO payDTO){
         Pay pay = new Pay();
         BeanUtils.copyProperties(payDTO,pay);
         Pay update = payService.update(pay);
