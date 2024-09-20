@@ -2,6 +2,8 @@ server:
   port: 8001
 
 spring:
+  profiles:
+    active: enterprise
   ## 应用程序名称
   application:
     name: cloud-payment-service
