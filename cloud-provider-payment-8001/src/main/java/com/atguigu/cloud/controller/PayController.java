@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/pay/")
 @Slf4j
+@RestController
+@RequestMapping("/pay")
 public class PayController {
 
     private final PayService payService;
@@ -40,7 +41,7 @@ public class PayController {
     }
 
     @GetMapping("{id}")
-    public Pay getById(@PathVariable Integer id){
+    public Pay getById(@PathVariable("id") Integer id){
         return payService.findById(id);
     }
 
