@@ -37,7 +37,7 @@ public class PayController {
     public String updatePay(@RequestBody PayDTO payDTO){
         Pay pay = new Pay();
         BeanUtils.copyProperties(payDTO,pay);
-        Pay update = payService.update(pay);
+        Pay update = payService.updateSelective(pay);
         return "成功修改数据,返回值:" + update;
     }
 

@@ -18,6 +18,8 @@ public interface PayService {
 
     Pay update(Pay pay);
 
+    Pay updateSelective(Pay pay);
+
     Pay updateSelective(Pay entity, Fn<Pay, Object>... forceUpdateFields);
 
     Pay findById(Integer id);
