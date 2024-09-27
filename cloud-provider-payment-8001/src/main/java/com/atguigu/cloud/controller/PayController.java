@@ -23,7 +23,7 @@ public class PayController {
     @PostMapping("save")
     public String savePay(@RequestBody Pay pay){
         System.out.println(pay.toString());
-        Pay save = payService.save(pay);
+        Pay save = payService.saveSelective(pay);
         return "成功插入数据,返回值:" + save;
     }
 

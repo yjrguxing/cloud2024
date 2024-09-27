@@ -10,6 +10,8 @@ public interface PayService {
 
     Pay save(Pay entity);
 
+    Pay saveSelective(Pay entity);
+
     int deleteById(Integer id);
 
     <F> int deleteByFieldList(Fn<Pay, F> field, Collection<F> fieldValueList);
