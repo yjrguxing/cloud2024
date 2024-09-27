@@ -23,6 +23,7 @@ public class PayController {
     @PostMapping("save")
     public String savePay(@RequestBody Pay pay){
         System.out.println(pay.toString());
+        // 回写id 其他默认值不回写 需要查询确定
         Pay save = payService.saveSelective(pay);
         return "成功插入数据,返回值:" + save;
     }
