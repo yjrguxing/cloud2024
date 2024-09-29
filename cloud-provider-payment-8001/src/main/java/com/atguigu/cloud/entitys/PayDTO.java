@@ -1,5 +1,6 @@
 package com.atguigu.cloud.entitys;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
 @Builder
 public class PayDTO implements Serializable {
 
+    @NotNull(message = "id不能为null")
     private Integer id;
     private String payNo;
     private String orderNo;

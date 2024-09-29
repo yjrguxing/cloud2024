@@ -3,6 +3,7 @@ package com.atguigu.cloud.controller;
 import com.atguigu.cloud.entitys.Pay;
 import com.atguigu.cloud.entitys.PayDTO;
 import com.atguigu.cloud.service.PayService;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +35,7 @@ public class PayController {
     }
 
     @PutMapping
-    public String updatePay(@RequestBody PayDTO payDTO){
+    public String updatePay(@RequestBody @Valid PayDTO payDTO){
         Pay pay = new Pay();
         BeanUtils.copyProperties(payDTO,pay);
         Pay update = payService.updateSelective(pay);
