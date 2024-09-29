@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @Builder
 public class PayDTO implements Serializable {
 
+    // todo 配置异常处理器
     @NotNull(message = "id不能为null")
     private Integer id;
     private String payNo;
