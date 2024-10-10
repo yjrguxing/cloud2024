@@ -32,6 +32,8 @@
         <spring.cloud.version>2023.0.0</spring.cloud.version>
         <!--与教程中存在差异,这里使用了当前可用的最新版本-->
         <spring.cloud.alibaba.version>2023.0.0.0-RC1</spring.cloud.alibaba.version>
+        <!--下方为自定义依赖-->
+        <apache.pdfbox.version>3.0.3</apache.pdfbox.version>
     </properties>
 
     <dependencyManagement>
@@ -147,6 +149,12 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring.boot.test.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <!-- apache pdfbox -->
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${apache.pdfbox.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
