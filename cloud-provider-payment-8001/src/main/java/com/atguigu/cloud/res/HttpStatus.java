@@ -1,5 +1,7 @@
 package com.atguigu.cloud.res;
 
+import java.util.Arrays;
+
 /**
  * Enumeration of HTTP status codes.
  *
@@ -513,6 +515,15 @@ public enum HttpStatus implements HttpStatusCode {
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * 查找对应的HTTP 状态码（Stream）
+	 * @param statusCode Http状态码
+	 * @return {@code HttpStatus} or {@code null}
+	 */
+	public static HttpStatus streamResolve(int statusCode){
+		return Arrays.stream(VALUES).filter(httpStatus -> httpStatus.value == statusCode).findFirst().orElse(null);
 	}
 
 
