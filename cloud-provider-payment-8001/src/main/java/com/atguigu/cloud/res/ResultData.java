@@ -27,15 +27,17 @@ public class ResultData<T> {
      */
     private T data;
 
+    private long timestamp;
+
     public static<T> ResultData<T> Success(){
-        return new ResultData<>(200,"Success",null);
+        return new ResultData<>(200,"Success",null,System.currentTimeMillis());
     }
 
     public static<T> ResultData<T> Success(T data){
-        return new ResultData<>(200,"Success",data);
+        return new ResultData<>(200,"Success",data,System.currentTimeMillis());
     }
 
     public static<T> ResultData<T> Error(Integer code,String message,T data){
-        return new ResultData<>(code,message,data);
+        return new ResultData<>(code,message,data,System.currentTimeMillis());
     }
 }
