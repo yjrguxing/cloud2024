@@ -8,7 +8,6 @@ import lombok.experimental.Accessors;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Accessors(chain = true)
 public class ResultData<T> {
 
@@ -28,6 +27,10 @@ public class ResultData<T> {
     private T data;
 
     private long timestamp;
+
+    public ResultData(){
+        this.timestamp = System.currentTimeMillis();
+    }
 
     public static<T> ResultData<T> Success(){
         return new ResultData<>(200,"Success",null,System.currentTimeMillis());
